@@ -1,0 +1,324 @@
+/*CONFIGURED TO LOOK BEST ON IPHONE X SCREEN SIZE OF 375*/
+/*Less Info / Normal Classes*/
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-image: url("./assets/Fall\ Daytime\ Background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.morning {
+  background-image: url("./assets/Sunrise\ Background.jpg");
+}
+.noon {
+  background-image: url("./assets/Leaf\ Daytime\ Background.jpg");
+}
+.night {
+  background-image: url("./assets/Night\ Moon\ Background.jpg");
+}
+
+/* Quote and Attribute */
+.quoteAndAttribute {
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+.quote,
+.attribute {
+  margin: 20px 20px 0 10px;
+  font-weight: 200;
+}
+.attribute {
+  font-weight: 400;
+}
+
+/* BUTTON */
+button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: black;
+  margin-right: 1px;
+  border: none;
+  outline: none;
+}
+.filter {
+  /*changes the color of the arrow svg to white*/
+  filter: invert(100%) sepia(5%) saturate(1446%) hue-rotate(252deg)
+    brightness(116%) contrast(100%);
+}
+button:hover {
+  cursor: pointer;
+}
+.backgroundButton {
+  background-color: white;
+  height: 34px;
+  width: 100px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.buttonWord {
+  color: slategray;
+  letter-spacing: 2.5px;
+  margin-left: 13px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* GREETING AND ICON */
+.lessInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  margin-left: 20px;
+  transition: height 0.7s;
+}
+svg {
+  height: 25px;
+  color: white;
+  margin-right: 10px;
+}
+.greeting,
+.currently {
+  letter-spacing: 2px;
+  font-weight: 200;
+  font-size: 18px;
+}
+.iconAndMessage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 220px;
+}
+.currently {
+  display: none;
+}
+
+/* CLOCK */
+.currentTime {
+  font-size: 100px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+  width: 40vw;
+  height: 18vh;
+}
+
+/*LOCATION*/
+.location {
+  letter-spacing: 2.5px;
+  font-size: 18px;
+  margin-bottom: 45px;
+  width: 300px;
+}
+
+/*MORE INFO & TOGGLE INFO*/
+.toggleQuoteAndAttribute {
+  position: fixed;
+  top: 0%;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.moreInfo {
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: height 0.7s;
+  background-color: whitesmoke;
+  color: black;
+}
+.toggleLessInfo {
+  display: flex;
+  justify-content: flex-end;
+}
+.toggleMoreInfo .lessInfo {
+  height: calc(100vh - 275px);
+}
+.toggleMoreInfo .moreInfo {
+  height: 275px;
+}
+.moreInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.zoneDay,
+.monthTemp {
+  display: flex;
+  flex-direction: column;
+}
+.month,
+.currentTemp,
+.timezone,
+.dayOfWeek {
+  margin: 13px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  align-items: center;
+}
+.timezoneValue,
+.currentTempValue,
+.monthValue,
+.dayOfWeekValue {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/*MEDIA QUERY FOR TABLET / IPAD SCREEN SIZE OF 768*/
+@media only screen and (min-width: 768px) {
+  /*CURRENT TIME*/
+  .currentTime {
+    font-size: 180px;
+    width: 63vw;
+    height: 18vh;
+  }
+
+  /*LESS INFO*/
+  .lessInfo {
+    margin-left: 50px;
+  }
+  svg {
+    height: 35px;
+  }
+  .greeting,
+  .currently {
+    font-size: 20px;
+    margin: 0;
+  }
+  .iconAndMessage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 440px;
+  }
+  .currently {
+    display: inline-block;
+  }
+
+  /*Location*/
+  .location {
+    font-size: 25px;
+    width: 300px;
+  }
+
+  /*QUOTE AND ATTRIBUTE*/
+  .quote {
+    margin: 100px 100px 0 0;
+    font-size: 20px;
+  }
+  .attribute {
+    font-size: 20px;
+  }
+
+  /* BUTTON */
+  button {
+    height: 34px;
+    width: 34px;
+  }
+  .backgroundButton {
+    height: 40px;
+    width: 110px;
+    margin-bottom: 60px;
+  }
+  .buttonWord {
+    margin-left: 13px;
+    font-size: 15px;
+  }
+
+  /* TOGGLE MORE INFO */
+  .moreInfo {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .toggleLessInfo {
+    justify-content: flex-end;
+  }
+  .month,
+  .currentTemp,
+  .timezone,
+  .dayOfWeek {
+    margin: 30px 20px;
+    flex-direction: column;
+    font-size: 15px;
+    align-items: flex-start;
+  }
+  .timezoneValue,
+  .currentTempValue,
+  .monthValue,
+  .dayOfWeekValue {
+    font-size: 30px;
+  }
+}
+
+/*MEDIA QUERY FOR LARGER SCREENS*/
+@media only screen and (min-width: 1024px) {
+  /*LESS INFO*/
+  .lessInfo {
+    margin-left: 140px;
+  }
+  .iconAndMessage {
+    margin-bottom: 30px;
+  }
+  .background {
+    display: flex;
+    margin-bottom: 13px;
+  }
+
+  /*LOCATION*/
+  .location {
+    margin-top: 20px;
+  }
+
+  /*QUOTE AND ATTRIBUTE*/
+  .quote {
+    margin-top: 40px;
+    width: 51%;
+  }
+
+  /* BUTTON */
+  .buttonLarge {
+    align-self: flex-end;
+  }
+
+  /* TOGGLE MORE INFO */
+  .monthTemp {
+    display: flex;
+    border-left: solid 1px grey;
+    justify-content: center;
+    margin-left: 80px;
+  }
+  .month,
+  .timezone {
+    margin-top: 0;
+  }
+  .month,
+  .currentTemp {
+    padding-left: 50px;
+  }
+  .currentTemp,
+  .dayOfWeek {
+    margin-bottom: 0;
+  }
+  .zoneDay {
+    margin-left: 200px;
+  }
+  .moreInfo {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Clock and Weather App</title>
+  </head>
+
+  <body
+    onload="display_currentTime();"
+    class="morning"
+    class="noon"
+    class="night"
+  ><div class = "wrapper">
+    <div class="lessInfo">
+      <div class = "quoteAndAttribute">
+      <div class="quote"></div>
+      <div class="attribute"></div>
+    </div>
+      <div class="background">
+        <div class="iconTimeLocation">
+        <div class = "iconAndMessage">
+        <svg
+          class="sun"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            class="sun"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+        <svg
+          class="moon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            class="moon"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+          />
+        </svg>
+        <div class="fullGreeting"><span class="greeting"></span><span class="currently">. IT'S CURRENTLY</span></div>
+      </div>
+        <div class="currentTime"></div>
+        <div class="location"></div>
+      </div>
+        <div class="buttonLarge">
+        <div class="backgroundButton">
+          <span class="buttonWord">MORE</span
+          ><button onclick = 'getMoreDetails()'>
+            <img src="assets/chevron-up.svg" class="filter" class="arrowUp">
+          </button>
+        </div></div>
+      </div>
+    </div>
+    <div class ="moreInfo">
+      <div class="zoneDay"><div class="timezone" >CURRENT TIMEZONE<div class="timezoneValue"></div></div>
+      <div class="dayOfWeek">DAY OF THE WEEK<div class="dayOfWeekValue"></div></div></div>
+      <div class="monthTemp"><div class="month">MONTH OF THE YEAR<span class="monthValue"></span></div>
+      <div class="currentTemp">CURRENT TEMPERATURE<span class="currentTempValue"></span></div></div>
+    </div>
+  </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
